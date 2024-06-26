@@ -12,5 +12,9 @@ public class Programa4 {
         System.out.println("Baldesote lleno");
         baldesote.llena();
         baldesote.pinta();
+        baldesote.vacia();
+        System.out.println("Vuelco el contenido de baldecito en baldesote");
+        baldecito.vuelcaEn(baldesote);
+        baldesote.pinta();
     }
 }
