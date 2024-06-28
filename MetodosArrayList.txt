@@ -31,11 +31,6 @@ Elimina la primera ocurrencia de un elemento.
 removeIf(filtro)
 Elimina los elementos que cumplen una determinada condición.
 
-
-
-https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html
-
-
 set(indice, elemento)
 Machaca el elemento que se encuentra en una determinada posición con el
 elemento que se pasa como parámetro.
@@ -45,3 +40,5 @@ Devuelve el tamaño (número de elementos) de la lista.
 
 toArray()
 Devuelve un array con todos y cada uno de los elementos que contiene la lista.
+
+https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html

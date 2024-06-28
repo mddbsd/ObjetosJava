@@ -1,7 +1,13 @@
 public class Gato extends Animal{
 
     private String raza;
+    private String nombre;
 
+    public Gato(String n, String r, Sexo s){
+        super(s);
+        raza = r;
+        nombre = n;
+    }
     public Gato(Sexo s, String r){
         super(s);
         raza = r;

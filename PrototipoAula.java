@@ -13,7 +13,24 @@ public class PrototipoAula {
             op = s.nextInt();
             switch(op){
                 case 1:
-
+                    for(int i = 0; i < vAlus.length; i++){
+                        String nom;
+                        String ape;
+                        String mat;
+                        int dni;
+                        int leg;
+                        System.out.println("Nombre: ");
+                        nom = s.nextLine();
+                        System.out.println("Apellido: ");
+                        ape = s.nextLine();
+                        System.out.println("Materia: ");
+                        mat = s.nextLine();
+                        System.out.println("DNI: ");
+                        dni = Integer.parseInt(s.nextLine());
+                        System.out.println("Legajo");
+                        leg = Integer.parseInt(s.nextLine());
+                        vAlus[i] = new Calumno(nom, ape, dni, mat, leg);
+                    }
                     break;
                 case 2:
                     salida = true;
