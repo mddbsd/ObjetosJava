@@ -12,7 +12,7 @@ public class EjemploArrayList8Objetos {
             System.out.println(gatoAux + "\n");
         }
 
-        g.add(new Gato("Macri", "gatogato", Sexo.MACHO));
+        g.add(2, new Gato("Macri", "gatogato", Sexo.MACHO));
 
         for(Gato gatoAux : g){
             System.out.println(gatoAux + "\n");

@@ -35,4 +35,9 @@ public class Calumno extends Cpersona{
     public int getLegajo(){
         return this.legajo;
     }
+    public String toString(){
+        return super.toString() +
+                "Materia: " + this.materia + "\n" +
+                "Legajo: " + this.legajo + "\n";
+    }
 }

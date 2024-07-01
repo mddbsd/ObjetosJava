@@ -1,38 +1,46 @@
 import clases.Calumno;
 import clases.Cdocente;
+import funciones.Menues;
+import funciones.Validaciones;
+import funciones.Ordenar;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class PrototipoAula {
     public static void main(String[] args){
         boolean salida = false;
         int op;
         Scanner s = new Scanner(System.in);
-        Calumno[] vAlus = new Calumno[5];
+        ArrayList<Calumno> vAlus = new ArrayList<Calumno>();
         do{
-            System.out.println("MENU DE OPCIONES:");
-            System.out.println("1. Ingresar alumnos");
-            op = s.nextInt();
+            Menues.menuPrincipal();
+            op = Integer.parseInt(s.nextLine());
             switch(op){
                 case 1:
-                    for(int i = 0; i < vAlus.length; i++){
-                        String nom;
-                        String ape;
-                        String mat;
-                        int dni;
-                        int leg;
-                        System.out.println("Nombre: ");
-                        nom = s.nextLine();
-                        System.out.println("Apellido: ");
-                        ape = s.nextLine();
-                        System.out.println("Materia: ");
-                        mat = s.nextLine();
-                        System.out.println("DNI: ");
-                        dni = Integer.parseInt(s.nextLine());
-                        System.out.println("Legajo");
-                        leg = Integer.parseInt(s.nextLine());
-                        vAlus[i] = new Calumno(nom, ape, dni, mat, leg);
-                    }
+                    boolean flag = false;
+                    do{
+                        System.out.println("Ingrese Nombre: ");
+                        String nom = s.nextLine();
+                        System.out.println("Ingrese Apellido: ");
+                        String ape = s.nextLine();
+                        System.out.println("Ingrese DNI: ");
+                        int DNI = Integer.parseInt(s.nextLine());
+                        System.out.println("Ingrese Materia :");
+                        String mat = s.nextLine();
+                        int leg = (int)(Math.random() * 101);
+                        vAlus.add(new Calumno(nom, ape, DNI, mat, leg));
+                        System.out.println("Desea ingresar mas alumnos?");
+                        String cont = Validaciones.validaSiNo();
+                        if (cont.equals("no")){
+                            flag = true;
+                        }
+                    }while(!flag);
                     break;
                 case 2:
+                    for(Calumno aux : vAlus){
+                        System.out.println(aux);
+                    }
+                    break;
+                case 3:
                     salida = true;
                     break;
                 default:

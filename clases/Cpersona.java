@@ -21,6 +21,10 @@ public abstract class Cpersona {
     public int getDni(){
         return this.dni;
     }
-
+    public String toString(){
+        return "Nombre: " + this.nombre + "\n" +
+               "Apellido: " + this.apellido + "\n" +
+               "Dni: " + this.dni + "\n";
+    }
 
 }
