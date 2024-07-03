@@ -27,6 +27,9 @@ public class Calumno extends Cpersona{
     public void setNota3(int n){
         this.nota3 = n;
     }
+    public void calculaPromedio(){
+        this.promedio = (this.nota1 + this.nota2 + this.nota3) / 3;
+    }
 
     //Getters
     public String getMateria(){
@@ -34,6 +37,9 @@ public class Calumno extends Cpersona{
     }
     public int getLegajo(){
         return this.legajo;
+    }
+    public double getPromedio(){
+        return this.promedio;
     }
     public String toString(){
         return super.toString() +
